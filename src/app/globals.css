@@ -1,9 +1,21 @@
 @config "../../tailwind.config.js";
 @import "tailwindcss";
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-oswald);
 }
 body {
   overflow-x: hidden;
+}
+
+@keyframes vertical-marquee {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.marquee {
+  animation: vertical-marquee 20s linear infinite;
 }
