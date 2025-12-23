@@ -1,5 +1,15 @@
 @config "../../tailwind.config.js";
 @import "tailwindcss";
+@theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+
+  @keyframes scroll {
+    to {
+      transform: translateY(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-oswald);
 }
@@ -19,3 +29,4 @@ body {
 .marquee {
   animation: vertical-marquee 20s linear infinite;
 }
+
